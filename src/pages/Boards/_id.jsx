@@ -1,7 +1,6 @@
 //Board details
 import { Box, Container, Typography } from "@mui/material";
-import ModeSelect from "../../components/ModeSelect";
-import AppBar from "../../components/AppBar";
+import AppBar from "~/components/AppBar";
 import Boardbar from "./BoardBar";
 import BoardContent from "./BoardContent";
 function Board() {
