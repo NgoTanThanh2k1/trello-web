@@ -1,0 +1,17 @@
+//Board details
+import { Box, Container, Typography } from "@mui/material";
+import ModeSelect from "../../components/ModeSelect";
+import AppBar from "../../components/AppBar";
+import Boardbar from "./BoardBar";
+import BoardContent from "./BoardContent";
+function Board() {
+  return (
+    <Container disableGutters maxWidth={false} sx={{ height: "100vh" }}>
+      <AppBar />
+      <Boardbar />
+      <BoardContent />
+    </Container>
+  );
+}
+
+export default Board;
