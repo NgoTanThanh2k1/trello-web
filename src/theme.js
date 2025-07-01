@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles'
-import { cyan, deepOrange, orange, red, teal } from '@mui/material/colors'
+// import { cyan, deepOrange, orange, red, teal } from '@mui/material/colors'
 import { experimental_extendTheme as extendTheme} from '@mui/material/styles'
 
 // A custom theme for this app
@@ -11,18 +11,18 @@ const theme = extendTheme({
 
 
   colorSchemes: {
-    light: {
-      palette: {
-        primary: teal,
-        main: deepOrange
-      }
-    },
-    dark: {
-      palette: {
-        primary: cyan,
-        main: orange
-      }
-    }
+    // light: {
+    //   palette: {
+    //     primary: teal,
+    //     main: deepOrange
+    //   }
+    // },
+    // dark: {
+    //   palette: {
+    //     primary: cyan,
+    //     main: orange
+    //   }
+    // }
   },
 
   
@@ -33,7 +33,10 @@ const theme = extendTheme({
         // Name of the slot
         root: {
           // Some CSS
-         textTransform: 'none'
+         textTransform: 'none',
+         borderWidth: '0,5px',
+         "&:hover": {borderWidth: '2px',},
+         
         },
       },
     },
@@ -49,11 +52,11 @@ const theme = extendTheme({
               height: '8px'
             },
             '*::-webkit-scrollbar-thumb':{
-              backgroundColor: '#bdc3c7',
+              backgroundColor: '#dcdde1',
               borderRadius: '8px'
             },
             '*::-webkit-scrollbar-thumb:hover':{
-              backgroundColor: '#00b894',
+              backgroundColor: '#white',
              
             }
           },
@@ -63,10 +66,10 @@ const theme = extendTheme({
     MuiInputLabel: {
       styleOverrides: {
         // Name of the slot
-        root: ({theme}) => ({
-          color: theme.palette.primary.main,
-          fontSize: '0.875rem'
-        })
+        root:  {  fontSize: '0.875rem'}
+          // color: theme.palette.primary.main,
+        
+        
           
         
           // Some CSS
@@ -77,21 +80,23 @@ const theme = extendTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         // Name of the slot
-        root: ({theme}) => {
-          return {
-            color: theme.palette.primary.main,
-            fontSize: '0.875rem',
-            '.MuiOutlinedInput-notchedOutline':{
-              borderColor: theme.palette.primary.light
-            },
-            '&:hover .MuiOutlinedInput-notchedOutline':{
-              borderColor: theme.palette.primary.main
-            },
-            '& fieldset':{
-              borderWidth: '1px !important',
-            },
-           
-          }
+        root:  {
+          fontSize: '0.875rem',
+          // '.MuiOutlinedInput-notchedOutline':{
+          //   borderColor: theme.palette.primary.light
+          // },
+          // '&:hover .MuiOutlinedInput-notchedOutline':{
+          //   borderColor: theme.palette.primary.main
+          // },
+          '& fieldset':{
+            borderWidth: '0.5px !important'
+          },
+          '&:hover fieldset':{
+            borderWidth: '1px !important'
+          },
+          '&.Mui-focused fieldset':{
+            borderWidth: '1px !important'
+          },
         }
          
         ,
