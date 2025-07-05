@@ -11,7 +11,25 @@ import theme from "~/theme";
 import Paper from "@mui/material/Paper";
 import MenuList from "@mui/material/MenuList";
 import { Box, Container, Typography } from "@mui/material";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 function Card({ card }) {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: card._id, data: { ...card } });
+
+  const dndKitCardStyles = {
+    touchAction: "none", // dành cho sensor deflaut dạng pointSensor
+    transform: CSS.Translate.toString(transform),
+    transition,
+    opacity: isDragging ? 0.5 : undefined,
+    border: isDragging ? "1px solid #2ecc71" : undefined,
+  };
   const shouldShowCardActions = () => {
     return (
       !!card?.memberIds?.length ||
@@ -21,6 +39,10 @@ function Card({ card }) {
   };
   return (
     <MuiCard
+      ref={setNodeRef}
+      style={dndKitCardStyles}
+      {...attributes}
+      {...listeners}
       sx={{
         cursor: "pointer",
         boxShadow: "0 1px 1px rgba(0,0,0,0.2)",
