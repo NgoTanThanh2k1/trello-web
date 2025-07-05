@@ -12,6 +12,7 @@ import {
   TouchSensor,
   DragOverlay,
   defaultDropAnimationSideEffects,
+  closestCorners,
 } from "@dnd-kit/core";
 import { useEffect } from "react";
 import React, { useState } from "react";
@@ -184,6 +185,7 @@ function BoardContent({ board }) {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
       onDragOver={handleDragOver}
+      collisionDetection={closestCorners}
     >
       <Box
         sx={{
