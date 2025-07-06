@@ -25,6 +25,17 @@ A Trello-like task management web application with modern **drag-and-drop** func
 
 ---
 
+## 📌 Notes
+This is a frontend-only project.
+
+You can easily extend it with:
+
+Backend integration
+
+Authentication (login/register)
+
+Persistent data storage
+
 ## 📥 Getting Started
 
 ```bash
@@ -37,16 +48,5 @@ npm install
 
 # Start the development server
 npm run dev
-
-## 📌 Notes
-This is a frontend-only project.
-
-You can easily extend it with:
-
-Backend integration
-
-Authentication (login/register)
-
-Persistent data storage
 
 🎉 Thank you for visiting this repository!
