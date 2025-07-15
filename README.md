@@ -3,7 +3,8 @@
 A Trello-like task management web application with modern **drag-and-drop** functionality, built using **React**, **Vite**, and **Material UI**.
 
 ---
-## 🔗 Visit web: https://trello-web-git-main-thanhs-projects-21f2da80.vercel.app/
+## 🔗 Visit web: trello-web-one-sigma.vercel.app
+
 
 ## 🚀 Technologies Used
 
